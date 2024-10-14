@@ -10,15 +10,15 @@ html, body {
     height: 100%;
 }
 
-body {
-    background-image: url(../img/baggrund-kopi.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+
+h1 a {
+    font-size: 120px;
+    font-family: serif;
+    color: #534741;
+    text-align: center;
+    font-weight: 50;
+    text-decoration: none;
 }
-
-
 
 h1 {
     font-size: 120px;
@@ -26,6 +26,12 @@ h1 {
     color: #534741;
     text-align: center;
     font-weight: 50;
+}
+
+.oeverst {
+    background-color: #eae5df;
+    padding: 20px;
+
 }
 
 h5 {
@@ -42,27 +48,17 @@ h5 {
 .forside2 {
    background-color: #82756B; 
    color: white;
-   padding: 200px; 
+   padding: 100px; 
     margin-top: 105vh;
 }
 
 .forside2 img {
     width: 50%; 
     height: auto;
-    max-width: 500px; 
-    margin-top: 100px;
+    max-width: 300px; 
+    margin-top: auto;
 }
 
-#velkommen {
-    margin-top: -30px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 30px;
-}
-
-p {
-    margin-bottom: 80px;
-}
 
 header {
     position: relative; /* Sikrer, at menuen kan placeres korrekt */
@@ -98,11 +94,6 @@ header .main-nav ul li {
     float: left;
 }
 
-.oeverst {
-    border-bottom: 5px solid #534741;
-    margin-bottom: -19px;
-}
-
 header .main-nav ul li a {
     text-decoration: none;
     font-size: 22.5px;
@@ -114,7 +105,6 @@ header .main-nav ul li a {
     width: 350px;
     text-align: center;
     background: transparent;
-    
 }
 
 header .main-nav ul li a:hover { /* når du holder musen over et element */
@@ -122,12 +112,33 @@ header .main-nav ul li a:hover { /* når du holder musen over et element */
     color: #eee;
 }
 
+.nav-1 {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+   
+}
+
+.nav-1 li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.nav-1 li a {
+text-decoration: none;
+color: #534741;
+}
+
+#Rum {
+    background: #333;
+    color: #eee;
+}
 
 header .main-nav ul li ul {
     position:absolute;
     left: 0;
     width: 350px;
-    background: rgba(250, 245, 239, 0.5);
+    background: rgba(250, 245, 239);
     display: none; /*dette gør at den forsviner, man kan ikke se det på hjemmesiden */
     z-index: 1000;
 }
@@ -207,13 +218,5 @@ header .main-nav ul li ul li ul {
 }
 
 footer {
-    background-color: #82756B;
-    border-top: 1.5px solid #534741; /* Tilføjer en hvid streg øverst */
-}
-
-.logo {
-    width: 110px;  /* Sætter bredden til 100 pixels */
-    height: auto;  /* Bevarer forholdet mellem højde og bredde */
-    padding: 5px;
-    margin: 10px;
+    color: #534741;
 }
