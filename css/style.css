@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url(../img/baggrund-kopi.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.oeverst {
+    color: rgb(243, 243, 239);
+}
+
+h1 {
+    font-size: 120px;
+    font-family: serif;
+    color: #534741;
+    text-align: center;
+    font-weight: 50;
+}
+
+h5 {
+    font-size: 20px;
+    color: #534741;
+   text-align: center;
+   font-style: italic;
+    margin-top: -20px;
+    position: relative;
+    left: 125px;
+}
+
+.forside2 {
+   background-color: #82756B; 
+   color: white;
+   padding: 50px; 
+    margin-top: 65vh;
+}
+
+.forside2 img {
+    width: 50%; 
+    height: auto;
+    max-width: 300px; 
+    margin-top: auto;
+}
+
