@@ -226,6 +226,7 @@ header .main-nav ul li ul li ul {
     text-align: center;
     margin-bottom: 30px;
     color: #534741;
+    margin-top: 40px;
 }
 
 #velkommentekst {
@@ -233,6 +234,7 @@ header .main-nav ul li ul li ul {
     text-align: center;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 70px;
 }
 
 .flot-stueindretning {
@@ -240,8 +242,13 @@ header .main-nav ul li ul li ul {
 
 }
 
+.flot-stueindretning h2 {
+    color: #eae5df;
+    margin-top: 205px;
+}
+
 h3 {
-    margin-top: 305px;
+    margin-top: 75px;
     text-align: center;
     font-size: 20px
 }
@@ -251,16 +258,41 @@ h4 {
     text-align: center;
     font-size: 18px;
     font-style: italic;
+    margin-bottom: 20px;
 }
 
-.forside-artikel-1 {
+.forside-artikel1 {
     display: flex;              /* Brug Flexbox */
     justify-content: center;    /* Horisontal centrering */
     align-items: center;        /* Vertikal centrering */
-    height: 50vh; 
-    padding-left: 400px;
+    
+
 }
 
+.forside-artikel1 img {
+    display: block; /* Sørg for, at billedet opfører sig som et blok-element */
+    max-width: 50%; /* Sørger for, at det ikke bliver for stort */
+    height: auto;
+    margin-bottom: 40px;
+    border: 2px solid #82756B;
+}
+
+.forside-artikel2 {
+    display: flex;              /* Brug Flexbox */
+    justify-content: center;    /* Horisontal centrering */
+    align-items: center;        /* Vertikal centrering */
+   
+    
+
+}
+
+.forside-artikel2 img {
+    display: block; /* Sørg for, at billedet opfører sig som et blok-element */
+    max-width: 50%; /* Sørger for, at det ikke bliver for stort */
+    height: auto;
+    border: 2px solid #82756B;
+    margin-bottom: 50px;
+}
 footer {
     background-color: #82756B;
     border-top: 1.5px solid #534741; /* Tilføjer en streg øverst */
