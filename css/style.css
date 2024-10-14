@@ -165,7 +165,7 @@ header .main-nav ul li {
 
 .oeverst {
     border-bottom: 5px solid #534741;
-    margin-bottom: -19px;
+    margin-bottom: -1px;
 }
 
 header .main-nav ul li a {
@@ -271,20 +271,37 @@ header .main-nav ul li ul li ul {
 
 }
 
+
 footer {
     background-color: #82756B;
-    border-top: 1.5px solid #534741; /* Tilføjer en hvid streg øverst */
+    border-top: 1.5px solid #534741; /* Tilføjer en streg øverst */
+    display: flex;             /* Flexbox for layout */
+    justify-content: space-between; /* Fordeler elementerne i footeren */
+    align-items: center;       /* Vertikal centrering */
+    padding: 0 20px;           /* Giver lidt afstand indeni footeren */
+    height: 100px; 
 }
 
 .logo {
-    width: 110px;  /* Sætter bredden til 100 pixels */
-    height: auto;  /* Bevarer forholdet mellem højde og bredde */
-    padding: 5px;
-    margin: 10px;
+    width: 100px;  /* Størrelse på logoet */
+    height: auto;
 }
+
 .instalogo {
-    width: 110px;  /* Sætter bredden til 100 pixels */
-    height: auto;  /* Bevarer forholdet mellem højde og bredde */
-    padding: 5px;
-    margin: 10px;
+    width: 80px;  /* Størrelse på Instagram logo */
+    height: auto;
+    margin: 0 auto; /* Dette vil placere instalogo i midten */
+    margin-left: 1050px;
+}
+
+.fblogo {
+    width: 95px;  /* Størrelse på Instagram logo */
+    height: auto;
+    margin: 0; /* Dette vil placere instalogo i midten */
+    
+}
+
+.maillogo {
+    width: 95px;
+    height: auto;
 }
