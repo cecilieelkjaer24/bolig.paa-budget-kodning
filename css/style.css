@@ -190,21 +190,38 @@ header .main-nav ul li a:hover { /* når du holder musen over et element */
 
 header .main-nav ul li ul {
     position:absolute;
+    top: 100%;
     left: 0;
     width: 21.8rem;
     background: rgba(250, 245, 239, 0.5);
     display: none; /*dette gør at den forsviner, man kan ikke se det på hjemmesiden */
     z-index: 1000;
+    padding: 0;
+    margin: 0;
 }
 
 header .main-nav ul li ul li {
+    margin: 0;       /* Fjern ekstra margin */
+    padding: 0;
     width: 100%;
     border-top: 1px solid rgba(0,0,0,0.1);
+    height: auto;
+
 }
 
-header .main-nav ul li ul li ul {
-    left: 12.5rem;
-    top: 0;
+
+
+header .main-nav ul li ul li ul li:hover {
+    background: #333;
+    color: #eee;
+    z-index: 10;
+}
+
+
+header .main-nav ul li ul li ul li {
+    background:rgba(250, 245, 239, 0.5);;
+    color: #333;
+    z-index: 10;
 }
 
 /*herunder kan man se at jeg har skrevet ul, og skrevet en ny, så komma betyder at man vil style flere ting på samme tid*/
@@ -228,9 +245,9 @@ header label {
 @media(max-width:991px){
 
 header {
-    padding: 1.25rem;
-}
-
+        padding: 1.25rem;
+    }
+    
 header label {
     display: block;
 }
@@ -250,17 +267,25 @@ header .main-nav ul li {
 }
 
 header .main-nav ul li ul {
-    position: relative;
-    width: 100%;
+    width: auto;      /* Lad bredden være automatisk baseret på indhold */
+    padding: 0;       /* Fjern eventuel padding */
+    margin: 0;
 }
 
-header .main-nav ul li ul li {
+header .main-nav ul li ul li a {
     background: #eee ;
+    display: block;       /* Gør linket til et block-element */   /* Juster padding efter behov */
+    padding: 10px 20px;
+    line-height: 1.5;     /* Sørger for at teksten ikke har ekstra højde */
+    background: none;
+   
 }
 
 header .main-nav ul li ul li ul {
     width: 100%;
-    left: 0;
+    z-index: 1001;
+    left: 100%;    /* Gør at sub-menuer starter præcis ved siden af hovedmenuen */
+    top: 0;
 }
 
 /*option og så knappen ved siden af Å*/
