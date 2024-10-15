@@ -225,23 +225,12 @@ header .main-nav ul li ul li ul {
     
 }
 
-#stuelogo2 {
-    background-color: #a0958c;
-    color: #534741;
-    display: inline-block;
-    padding: 5px; /* Tilføjer lidt afstand mellem teksten og kanten af baggrunden */
-    margin-left: 42rem;
-    margin-top: 6.25rem;
-    
-}
-
-
 
 h3 {
     font-family: bodoni, serif;
     margin-top: 1.5rem;
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     font-weight: 100;
     color: #5a544f;
 }
@@ -303,7 +292,147 @@ p {
     background-color: #eae5df;
 }
 
+#nr2 {
+   text-align: start;
+   margin-left: 23rem;
+    font-family: bodoni, serif;
+    font-size: 2.5rem;
+    margin-bottom: -2rem;
+   
+}
 
+#nr3 {
+    text-align: end;
+     font-family: bodoni, serif;
+     font-size: 2.5rem;
+     margin-top: 0.5rem;
+     margin-right: 21rem;
+     margin-bottom: 1rem;
+ }
+
+ #tekst2 {
+        margin-left: 22.7rem;
+        margin-right: 19.2rem;
+        margin-bottom: 3rem;
+        border-bottom: 2px solid #82756B;
+        padding-bottom: 2rem;
+        
+    
+ }
+
+.sovesofa-img {
+    display: flex; /* Gør containeren til en flex container */
+    justify-content: space-around; /* Fordel billederne jævnt */
+    margin-top: 3rem;
+}
+
+
+
+.sovesofa-img img {
+    display: inline-block;
+    max-width: 40%; /* Sørger for, at hver figur ikke er for bred */
+    text-align: center; /* Centrerer billedteksten */
+    margin: 0; /* Fjern margin så billederne er tættere på hinanden */
+    width: 25%; /* Gør billedet tilpasningsdygtigt til figurens bredde */
+    height: auto; /* Sørger for, at billedet beholder proportionerne */
+    border: 2px solid #82756B;
+}
+
+#sovesofa1 {
+    margin-left: 22rem;
+   
+}
+
+#sovesofa2 {
+    margin-right: 20rem;
+    
+}
+
+#produkt-img-sofa {
+    width: 40%;
+    height: auto;
+    margin-left: 20rem;
+}
+
+#produkt-tekst1 {
+    margin-left: 25rem;
+    margin-right: 45rem;
+    margin-bottom: 10rem;
+}
+
+#produkt-img-sofagraa {
+    width: 40%;
+    height: auto;
+    margin-left: 35rem;
+}
+
+#produkt-tekst2 {
+    margin-left: 45rem;
+    margin-right: 25rem;
+    margin-bottom: 10rem;
+}
+
+.Dekoration {
+    background-color: #eae5df;
+}
+
+h2 {
+    color: #eae5df;
+}
+
+#nr4 {
+    text-align: center;
+     font-family: bodoni, serif;
+     font-size: 2.5rem;
+     margin-top: 0.5rem;
+     margin-bottom: 1rem;
+ }
+
+#storvase {
+    width: 30rem;
+    margin-left: 30rem;
+}
+
+#produkt-img-vase {
+    width: 15%;
+    height: auto;
+    margin-left: 25rem;
+    
+}
+
+#produkt-tekst3 {
+    
+    margin-bottom: 20rem;
+    margin-left: 20rem;
+}
+
+#produkt-img-blomster {
+    width: 10%;
+    height: auto;
+    
+    margin-left: 10rem;
+}
+
+
+#produkt-tekst4 {
+    margin-right: 25rem;
+    margin-bottom: 10rem;
+}
+
+.vase-blomst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#produkt-img-blomster, 
+#produkt-img-vase,
+produkt-tekst3,
+produkt-tekst4 {
+    width: 15%; /* Sætter bredden af billederne */
+    height: auto; /* Bevarer proportionerne */
+
+}
 
 footer {
     background-color: #82756B;
