@@ -4,9 +4,8 @@
     box-sizing: border-box;
 }
 
+/*Her ses redigeringen af header før navigationsbarren*/
 html, body {
-    margin: 0;
-    padding: 0;
     height: 100%;
 }
 
@@ -161,51 +160,68 @@ header label {
     display: none;
 }
 
+
 @media(max-width:991px){
 
-header {
-    padding: 1.25rem;
-}
+    header {
+            padding: 1.25rem;
+        }
+        
+    header label {
+        display: block;
+    }
+    
+    header .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+    
+    header .main-nav ul {
+        flex-direction: column; 
+    }
 
-header label {
-    display: block;
-}
+    header .main-nav ul li {
+        width: 100%;
+    }
+    
+    header .main-nav ul li ul {
+        position: relative;  
+        width: 100%;       
+        left: 0;           
+        top: 0;              
+        display: none;  
+    }
+    
+    header .main-nav ul li ul li a {
+        background: #eee ;
+        display: block;       
+        padding: 10px 20px;
+        line-height: 1.5;   
+        background: none;
+       
+    }
 
-header .main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    display: none;
-}
+    header .main-nav ul li:focus-within > ul,
+    header .main-nav ul li:hover > ul {
+        display: block;
 
-header .main-nav ul li {
-    width: 100%;
-}
-
-header .main-nav ul li ul {
-    position: relative;
-    width: 100%;
-}
-
-header .main-nav ul li ul li {
-    background: #eee ;
-}
-
-header .main-nav ul li ul li ul {
-    width: 100%;
-    left: 0;
-}
-
-/*option og så knappen ved siden af Å*/
-
-#menu-bar:checked~ .main-nav {
-    display: block;
-}
-
-}
+    }
+    
+    header .main-nav ul li ul li ul {
+        left: 0;            
+        top: 0;
+    }
+    
+    #menu-bar:checked~ .main-nav {
+        display: block;
+    }
+    
+    }
 
 .diy-pude {
     background-color: #eae5df;
@@ -253,6 +269,13 @@ h4 {
 .Opskriften {
     margin-left: 24.5rem;
     margin-bottom: 2rem;
+   
+}
+
+h6 {
+    color: white;
+    border-bottom: 1px solid #82756B;
+    margin-left: -1.5rem;
 }
 
 #tekst {
@@ -283,21 +306,22 @@ h4 {
 }
 
 p {
-    margin-left: 22.7rem;
-    margin-right: 22.7rem;
+    margin-left: 28em;
+    margin-right: 28rem;
     margin-bottom: 2rem;
+    line-height: 1.5rem;
 }
 
 #nr1 {
-    margin-right: 17.5rem;
     font-family: bodoni, serif;
     font-size: 1.5rem;
+    text-align: start;
+    margin-left: 28rem;
 }
 
 
 #nr2 {
-   text-align: start;
-   margin-left: 23rem;
+   text-align: center;
     font-family: bodoni, serif;
     font-size: 2.5rem;
     margin-bottom: -2rem;
@@ -311,7 +335,9 @@ p {
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: -1.5rem;
+    font-weight: 600;
  }
+
 
  #tekst2 {
         margin-left: 22.7rem;
@@ -319,7 +345,7 @@ p {
         margin-bottom: 3rem;
         border-bottom: 2px solid #82756B;
         padding-bottom: 2rem;
-        
+        line-height: 1.5rem;
     
  }
 
@@ -350,35 +376,25 @@ p {
 #trinfortrin {
     margin-right: 20rem;
     height: 25rem;
+    line-height: 1.5rem;
 }
 
-#produkt-img-sofa {
-    width: 40%;
-    height: auto;
-    margin-left: 20rem;
+.opskriftsguide h5 {
+    text-align: start;
+    font-family: bodoni, serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: -9.1rem;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1.2rem;
+
 }
 
-#produkt-tekst1 {
-    margin-left: 25rem;
-    margin-right: 45rem;
-    margin-bottom: 10rem;
-}
-
-#produkt-img-sofagraa {
-    width: 40%;
-    height: auto;
-    margin-left: 35rem;
-}
-
-#produkt-tekst2 {
-    margin-left: 45rem;
-    margin-right: 25rem;
-    margin-bottom: 5rem;
-}
-
-#Inspiration {
-    margin-left: 25rem;
-    margin-bottom: 3rem;
+.opskriftsguide {
+    margin-right: 20rem;
+    line-height: 1.5rem;
 }
 
 

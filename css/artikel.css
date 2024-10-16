@@ -4,9 +4,8 @@
     box-sizing: border-box;
 }
 
+/*Her ses redigeringen af header før navigationsbarren*/
 html, body {
-    margin: 0;
-    padding: 0;
     height: 100%;
 }
 
@@ -161,49 +160,65 @@ header label {
 
 @media(max-width:991px){
 
-header {
-    padding: 1.25rem;
-}
+    header {
+            padding: 1.25rem;
+        }
+        
+    header label {
+        display: block;
+    }
+    
+    header .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+    
+    header .main-nav ul {
+        flex-direction: column; 
+    }
 
-header label {
-    display: block;
-}
+    header .main-nav ul li {
+        width: 100%;
+    }
+    
+    header .main-nav ul li ul {
+        position: relative;  
+        width: 100%;       
+        left: 0;           
+        top: 0;              
+        display: none;  
+    }
+    
+    header .main-nav ul li ul li a {
+        background: #eee ;
+        display: block;       
+        padding: 10px 20px;
+        line-height: 1.5;   
+        background: none;
+       
+    }
 
-header .main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    display: none;
-}
+    header .main-nav ul li:focus-within > ul,
+    header .main-nav ul li:hover > ul {
+        display: block;
 
-header .main-nav ul li {
-    width: 100%;
-}
-
-header .main-nav ul li ul {
-    position: relative;
-    width: 100%;
-}
-
-header .main-nav ul li ul li {
-    background: #eee ;
-}
-
-header .main-nav ul li ul li ul {
-    width: 100%;
-    left: 0;
-}
-
-/*option og så knappen ved siden af Å*/
-
-#menu-bar:checked~ .main-nav {
-    display: block;
-}
-
-}
+    }
+    
+    header .main-nav ul li ul li ul {
+        left: 0;            
+        top: 0;
+    }
+    
+    #menu-bar:checked~ .main-nav {
+        display: block;
+    }
+    
+    }
 
 .flot-stueindretning {
     background-color: #eae5df;
@@ -248,17 +263,6 @@ h4 {
     
 }
 
-#tekst {
-    font-size: 1rem;
-    margin-bottom: 1.25rem;
-    font-weight: 100;
-    color: #5a544f;
-    margin: 1rem;
-    margin-left: 15rem;
-    margin-right: 30rem;
-    text-align:left;
-    text-decoration: none;
-}
 
 .forside-artikel1 {
     display: flex;              /* Brug Flexbox */
@@ -279,9 +283,10 @@ p {
     margin-left: 22.7rem;
     margin-right: 22.7rem;
     margin-bottom: 2rem;
+    line-height: 1.5rem;
 }
 
-#nr1 {
+#underrubrik1 {
     margin-right: 17.5rem;
     font-family: bodoni, serif;
     font-size: 1.5rem;
@@ -292,7 +297,7 @@ p {
     background-color: #eae5df;
 }
 
-#nr2 {
+#underrubrik2 {
    text-align: start;
    margin-left: 23rem;
     font-family: bodoni, serif;
@@ -301,7 +306,7 @@ p {
    
 }
 
-#nr3 {
+#underrubrik3 {
     text-align: end;
      font-family: bodoni, serif;
      font-size: 2.5rem;
@@ -406,6 +411,13 @@ h2 {
     
 }
 
+#dekoration-tekst {
+    margin-left: 30rem;
+    margin-right: 29rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
 #produkt-tekst3 {
     
     margin-bottom: 20rem;
@@ -496,32 +508,42 @@ produkt-tekst4 {
     margin-top: -4.8rem;
 }
 
+#opskrift a {
+    color: blue;
+}
+
+#sidstetekst {
+    margin-left: 25rem;
+    margin-right: 25rem;
+}
+
+/*Her ses min css redigering af footeren*/
 footer {
     background-color: #82756B;
-    border-top: 1.5px solid #534741; /* Tilføjer en streg øverst */
-    display: flex;             /* Flexbox for layout */
-    justify-content: space-between; /* Fordeler elementerne i footeren */
-    align-items: center;       /* Vertikal centrering */
-    padding: 0 20px;           /* Giver lidt afstand indeni footeren */
+    border-top: 1.5px solid #534741; 
+    display: flex;           
+    justify-content: space-between; 
+    align-items: center;     
+    padding: 0 20px;           
     height: 6.25rem; 
 }
 
 .logo {
-    width: 6.25rem;  /* Størrelse på logoet */
+    width: 6.25rem; 
     height: auto;
 }
 
 .instalogo {
-    width: 5rem;  /* Størrelse på Instagram logo */
+    width: 5rem;  
     height: auto;
-    margin: 0 auto; /* Dette vil placere instalogo i midten */
+    margin: 0 auto; 
     margin-left: 65.6rem;
 }
 
 .fblogo {
-    width: 5.9rem;  /* Størrelse på Instagram logo */
+    width: 5.9rem; 
     height: auto;
-    margin: 0; /* Dette vil placere instalogo i midten */
+    margin: 0; 
     
 }
 

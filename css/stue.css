@@ -4,9 +4,8 @@
     box-sizing: border-box;
 }
 
+/*Her ses redigeringen af header før navigationsbarren*/
 html, body {
-    margin: 0;
-    padding: 0;
     height: 100%;
 }
 
@@ -45,72 +44,166 @@ h5 {
     margin-bottom: 1.25rem;
 }
 
-.forside2 {
-   background-color: #82756B; 
-   color: white;
-   padding: 6.25rem; 
-    margin-top: 105vh;
-}
+/*Her ses redigeringen i css af navigationsbarren*/
 
-.forside2 img {
-    width: 50%; 
-    height: auto;
-    max-width: 19rem; 
-    margin-top: auto;
+label {
+    font-size: 0.9rem;
 }
-
 
 header {
-    position: relative; /* Sikrer, at menuen kan placeres korrekt */
+    position: relative;
 }
 
 header .main-nav {
     background-color: rgba(171, 159, 143, 0.7); /* Baggrundsfarve for navigationsmenu */
-    width: 100%; /* Fylder hele bredden */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional skygge */
-   
-}
-
-header .main-nav ul {
-    list-style: none;
-    padding: 0; /* Fjerner standard padding */
-    margin: 0; /* Fjerner standard margin */
-    display: flex; /* Brug flexbox for at fordele menuen jævnt */
-    justify-content: space-around; /* Fordeler menupunkterne ligeligt */
-}
-
-header .main-nav ul li {
-    position: relative; /* Bevarer den relative position for dropdown-menuer */
+    width: 100%; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 header .main-nav ul {
     list-style: none;
     padding: 0; 
-    margin: 0;
+    margin: 0; 
+    display: flex; 
+    justify-content: space-around; 
 }
 
 header .main-nav ul li {
-    position: relative;
-    float: left;
+    position: relative; 
 }
+
 
 header .main-nav ul li a {
     text-decoration: none;
     font-size: 1.4rem;
-    padding: 1.1rem;
     color: rgb(43, 8, 8);
     display: block;
-    padding: 10px 20px; /* Mindre padding */
+    padding: 10px 20px; 
     line-height: 1.5; 
     width: 21.8rem;
     text-align: center;
     background: transparent;
+    
 }
 
-header .main-nav ul li a:hover { /* når du holder musen over et element */
+header .main-nav ul li a:hover { 
     background: #333;
     color: #eee;
 }
+
+header .main-nav ul li ul {
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width: 21.8rem;
+    background: rgba(250, 245, 239, 0.5);
+    display: none; 
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+}
+
+header .main-nav ul li ul li {
+    margin: 0;       
+    padding: 0;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    height: auto;
+
+}
+
+
+header .main-nav ul li ul li ul li:hover {
+    background: #333;
+    color: #eee;
+    z-index: 10;
+}
+
+
+header .main-nav ul li ul li ul li {
+    background:rgba(250, 245, 239);;
+    color: #333;
+    z-index: 10;
+}
+
+header .main-nav ul li:focus-within > ul, 
+header .main-nav ul li:hover > ul {
+display: block;
+}
+
+#menu-bar {
+    display: none; 
+}
+
+header label {
+    font-size: 1.25rem;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media(max-width:991px){
+
+    header {
+            padding: 1.25rem;
+        }
+        
+    header label {
+        display: block;
+    }
+    
+    header .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+    
+    header .main-nav ul {
+        flex-direction: column; 
+    }
+
+    header .main-nav ul li {
+        width: 100%;
+    }
+    
+    header .main-nav ul li ul {
+        position: relative;  
+        width: 100%;       
+        left: 0;           
+        top: 0;              
+        display: none;  
+    }
+    
+    header .main-nav ul li ul li a {
+        background: #eee ;
+        display: block;       
+        padding: 10px 20px;
+        line-height: 1.5;   
+        background: none;
+       
+    }
+
+    header .main-nav ul li:focus-within > ul,
+    header .main-nav ul li:hover > ul {
+        display: block;
+
+    }
+    
+    header .main-nav ul li ul li ul {
+        left: 0;            
+        top: 0;
+    }
+    
+    #menu-bar:checked~ .main-nav {
+        display: block;
+    }
+    
+    }
 
 .nav-1 {
     list-style: none;
@@ -134,97 +227,13 @@ color: #534741;
     color: #eee;
 }
 
-header .main-nav ul li ul {
-    position:absolute;
-    left: 0;
-    width: 21.8rem;
-    background: rgba(250, 245, 239);
-    display: none; /*dette gør at den forsviner, man kan ikke se det på hjemmesiden */
-    z-index: 1000;
-}
-
-header .main-nav ul li ul li {
-    width: 100%;
-    border-top: 1px solid rgba(0,0,0,0.1);
-}
-
-header .main-nav ul li ul li ul {
-    left: 12.5rem;
-    top: 0;
-}
-
-/*herunder kan man se at jeg har skrevet ul, og skrevet en ny, så komma betyder at man vil style flere ting på samme tid*/
-
-header .main-nav ul li:focus-within > ul, 
-header .main-nav ul li:hover > ul {
-display: block;
-}
-
-#menu-bar {
-    display: none; /*display none fjerner noget så vi ikke kan se det, der var en lille checkbox, men er der ikke længere*/
-}
-
-header label {
-    font-size: 1.25rem;
-    color: #333;
-    cursor: pointer;
-    display: none;
-}
-
-@media(max-width:991px){
-
-header {
-    padding: 1.25rem;
-}
-
-header label {
-    display: block;
-}
-
-header .main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    display: none;
-}
-
-header .main-nav ul li {
-    width: 100%;
-}
-
-header .main-nav ul li ul {
-    position: relative;
-    width: 100%;
-}
-
-header .main-nav ul li ul li {
-    background: #eee ;
-}
-
-header .main-nav ul li ul li ul {
-    width: 100%;
-    left: 0;
-}
-
-/*option og så knappen ved siden af Å*/
-
-#menu-bar:checked~ .main-nav {
-    display: block;
-}
-
-}
-
 .stue-velkommen {
     background-color: #fff;
 }
 
 #stueforside {
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
-    margin-bottom: 1.8rem;
     color: #534741;
     margin-top: 2.5rem;
 }
@@ -232,9 +241,10 @@ header .main-nav ul li ul li ul {
 #velkommentekst {
     font-size: 1.25rem;
     text-align: center;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    margin-top: 4.3rem;
+    margin-left: 10.25rem;
+    margin-right: 10.25rem;
+    margin-top: 3.3rem;
+    line-height: 2rem;
 }
 
 .flot-stueindretning {
@@ -244,7 +254,7 @@ header .main-nav ul li ul li ul {
 
 .flot-stueindretning h2 {
     color: #eae5df;
-    margin-top: 12.8rem;
+    margin-top: 8.8rem;
     
 }
 
@@ -272,7 +282,7 @@ header .main-nav ul li ul li ul {
 h3 {
     margin-top: 1.5rem;
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     font-weight: 100;
     color: #5a544f;
 }
@@ -280,7 +290,7 @@ h3 {
 h4 {
     
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-style: italic;
     margin-bottom: 1.25rem;
     font-weight: 100;
@@ -300,7 +310,7 @@ h4 {
     display: block; /* Sørg for, at billedet opfører sig som et blok-element */
     max-width: 50%; /* Sørger for, at det ikke bliver for stort */
     height: auto;
-    border: 2px solid #82756B;
+    border: 8px solid #82756B;
     margin: 0 auto;
 }
 
@@ -316,35 +326,37 @@ h4 {
     display: block; /* Sørg for, at billedet opfører sig som et blok-element */
     max-width: 50%; /* Sørger for, at det ikke bliver for stort */
     height: auto;
-    border: 2px solid #82756B;
+    border: 8px solid #82756B;
     margin-bottom: 3.12rem;
 }
+
+    /*Her ses min css redigering af footeren*/
 footer {
     background-color: #82756B;
-    border-top: 1.5px solid #534741; /* Tilføjer en streg øverst */
-    display: flex;             /* Flexbox for layout */
-    justify-content: space-between; /* Fordeler elementerne i footeren */
-    align-items: center;       /* Vertikal centrering */
-    padding: 0 20px;           /* Giver lidt afstand indeni footeren */
+    border-top: 1.5px solid #534741; 
+    display: flex;           
+    justify-content: space-between; 
+    align-items: center;     
+    padding: 0 20px;           
     height: 6.25rem; 
 }
 
 .logo {
-    width: 6.25rem;  /* Størrelse på logoet */
+    width: 6.25rem; 
     height: auto;
 }
 
 .instalogo {
-    width: 5rem;  /* Størrelse på Instagram logo */
+    width: 5rem;  
     height: auto;
-    margin: 0 auto; /* Dette vil placere instalogo i midten */
+    margin: 0 auto; 
     margin-left: 65.6rem;
 }
 
 .fblogo {
-    width: 5.9rem;  /* Størrelse på Instagram logo */
+    width: 5.9rem; 
     height: auto;
-    margin: 0; /* Dette vil placere instalogo i midten */
+    margin: 0; 
     
 }
 
