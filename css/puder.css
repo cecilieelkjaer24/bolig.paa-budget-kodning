@@ -21,7 +21,7 @@ h1 a {
     font-family: serif;
     color: var(--overskrift);
     text-align: center;
-    font-weight: 50;
+    font-weight: 100;
     text-decoration: none;
 }
 
@@ -30,7 +30,7 @@ h1 {
     font-family: serif;
     color: var(--overskrift);
     text-align: center;
-    font-weight: 50;
+    font-weight: 100;
 }
 
 .oeverst {
@@ -286,16 +286,29 @@ h4 {
     
 }
 
+.overskrift {
+    font-size: 1.25rem;
+    color: var(--footer);
+   text-align: start;
+   font-style: italic;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-family: bodoni, serif;
+    list-style: none;
+    margin-left: -1rem;
+}
+
 .Opskriften {
     margin-left: 24.5rem;
     margin-bottom: 2rem;
    
 }
 
-h6 {
+.linjen {
     color: white;
     border-bottom: 1px solid var(--footer);
     margin-left: -1.5rem;
+    list-style: none;
 }
 
 #tekst {
@@ -332,7 +345,7 @@ p {
     line-height: 1.5rem;
 }
 
-#nr1 {
+#haekling {
     font-family: bodoni, serif;
     font-size: 1.5rem;
     text-align: start;
@@ -340,7 +353,7 @@ p {
 }
 
 
-#nr2 {
+#opskrift {
    text-align: center;
     font-family: bodoni, serif;
     font-size: 2.5rem;
@@ -348,7 +361,7 @@ p {
    
 }
 
-#nr3 {
+.rubrik-guide {
     text-align: start;
     font-family: bodoni, serif;
     font-size: 1.5rem;

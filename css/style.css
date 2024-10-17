@@ -30,7 +30,7 @@ h1 {
     font-family: serif;
     color: var(--overskrift);
     text-align: center;
-    font-weight: 50;
+    font-weight: 100;
 }
 
 h5 {
@@ -76,7 +76,7 @@ header .main-nav ul li {
 
 
 .oeverst {
-    border-bottom: 5px solid var(--overskrift);;
+    border-bottom: 5px solid var(--overskrift);
     margin-bottom: -1px;
 }
 
@@ -132,7 +132,7 @@ header .main-nav ul li ul li ul li:hover {
 header .main-nav ul li ul li ul li {
     background:rgba(250, 245, 239, 0.5);;
     color: var(--hover);
-    z-index: 10;
+    
 }
 
 

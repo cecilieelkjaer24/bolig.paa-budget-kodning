@@ -22,7 +22,7 @@ h1 a {
     font-family: serif;
     color: var(--overskrift);
     text-align: center;
-    font-weight: 50;
+    font-weight: 100;
     text-decoration: none
 }
 
@@ -31,7 +31,7 @@ h1 {
     font-family: serif;
     color: var(--overskrift);
     text-align: center;
-    font-weight: 50;
+    font-weight: 100;
 }
 
 .oeverst {
@@ -234,9 +234,7 @@ color: var(--overskrift);
         color: #eee;
     }
 
-* {
-   box-sizing: border-box;
-}
+
       
    /*Nedenfor ses css redigeringen af billederne*/   
 .gallery {
